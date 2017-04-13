@@ -1,0 +1,19 @@
+body {
+	overflow: hidden;
+	background: #111;
+}
+
+.logo-container {
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.mp_logo {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    color: #fff;
+}
