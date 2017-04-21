@@ -1,6 +1,13 @@
 body {
-	overflow: hidden;
-	background: #111;
+    overflow: hidden;
+    background: #000;    
+}
+
+.app-container {
+    background: -webkit-linear-gradient(to top right, rgba(2, 34, 101, 100), rgba(3, 143, 184, 50));
+    background: -moz-linear-gradient(to top right, rgba(2, 34, 101, 100), rgba(3, 143, 184, 50));
+    background: -o-linear-gradient(to top right, rgba(2, 34, 101, 100), rgba(3, 143, 184, 50));
+    background: linear-gradient(to top right, rgba(2, 34, 101, 100), rgba(3, 143, 184, 50));
 }
 
 .logo-container {
