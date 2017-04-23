@@ -5,8 +5,13 @@ html, body {
     color: #FFFFFF;
 }
 
+html, body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
 .app-container {
-    height: 100%;    
+    height: 100%;
+    overflow: auto;
     background: -webkit-linear-gradient(to top right, rgba(2, 34, 101, 100), rgba(3, 143, 184, 50));
     background: -moz-linear-gradient(to top right, rgba(2, 34, 101, 100), rgba(3, 143, 184, 50));
     background: -o-linear-gradient(to top right, rgba(2, 34, 101, 100), rgba(3, 143, 184, 50));
@@ -15,4 +20,139 @@ html, body {
 
 .app-particles {
     position: absolute;
+}
+
+.logo {
+    margin-top: 56px;
+}
+
+.app-content {
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.section-header {
+    font-size: 48px;
+}
+
+.app-goals {
+    margin-top: 30px;
+    width: 500px;
+}
+
+.call-form {
+    margin-top: 70px;
+}
+
+.call-form__title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.contact-phone {
+    margin-top: 30px;
+}
+
+.contact-phone input,
+.call-form__submit button {
+    width: 350px;
+    height: 52px;
+}
+
+.call-form__submit button {
+    margin-top: 20px;
+    background: #E91E63;
+}
+
+.calc-inputs {
+    margin-top: 20px;
+    white-space: nowrap;
+}
+
+.calc-inputs input {
+    width: 143px;
+    height: 56px;
+}
+
+.calc-inputs__controls,
+.calc-inputs-labels__text {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: 10px;
+}
+
+.calc-inputs-labels__text {
+    margin-left: 30px;    
+}
+
+.calc-inputs__controls:first-of-type,
+.calc-inputs-labels__text:first-of-type {
+    margin-left: 0;
+}
+
+.calc-inputs__controls_prediction {
+    width: 120px;
+    white-space: initial;
+}
+
+.calc-inputs-labels__text {
+    width: 123px;    
+}
+
+.client-prediction {
+    margin-top: 30px;
+}
+
+.client-prediction {
+    font-size: 48px;
+}
+
+.client-prediction__count {
+    color: #25C714;
+}
+
+.addition {
+    margin-top: 50px;
+}
+
+.addition__title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.addition input {
+    width: 143px;
+    height: 56px;
+}
+
+.addition__controls {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-top: 14px;
+}
+
+.addition__controls_prediction {
+    width: 130px;
+    margin-left: 10px;
+}
+
+.addition__controls-label {
+    margin-top: 10px;
+}
+
+.order-down-price {
+    margin-top: 20px;
+}
+
+.order-down-prediction {
+    font-size: 48px;
+}
+
+.order-down-prediction__count {
+    color: #25C714;    
+}
+
+.smooth-text {
+    opacity: .5;
 }
