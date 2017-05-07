@@ -46,13 +46,35 @@ html, body {
 
 .call-form__submit button {
     margin-top: 20px;
-    background: #E91E63;
+    background: #e91e63;
+    border: 0;
 }
 
+.pretty-input {
+	border-radius: 3px;
+	background-color: rgba(190, 190, 190, .3);
+	border: solid 2px rgba(255, 255, 255, .3);
+    color: #ffffff;
+    font-size: 20px;
+}
 
+input[type="tel"] {
+    font-size: 16px;
+    padding: 10px;
+}
 
-
-
+input[type="tel"]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #ffffff;
+}
+input[type="tel"]::-moz-placeholder { /* Firefox 19+ */
+  color: #ffffff;
+}
+input[type="tel"]:-ms-input-placeholder { /* IE 10+ */
+  color: #ffffff;
+}
+input[type="tel"]:-moz-placeholder { /* Firefox 18- */
+  color: #ffffff;
+}
 
 .contact-phone input,
 .call-form__submit button {
@@ -102,6 +124,7 @@ html, body {
     top: 100%;
     left: 0;
     margin-left: 0;
+    vertical-align: bottom;
 }
 
 .calc-inputs-labels {
