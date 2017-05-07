@@ -20,6 +20,7 @@ if (!window.requestAnimationFrame) {
 	 */
 	function Constellation (canvas, options) {
 		var $canvas = $(canvas),
+			$document = $(document),
 			context = canvas.getContext('2d'),
 			defaults = {
 				star: {
@@ -164,7 +165,7 @@ if (!window.requestAnimationFrame) {
 		};
 
 		this.bind = function () {
-			$canvas.on('mousemove', function(e){
+			$document.on('mousemove', function(e){
 				config.position.x = e.pageX - $canvas.offset().left;
 				config.position.y = e.pageY - $canvas.offset().top;
 			});

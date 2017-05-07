@@ -15,7 +15,7 @@ html, body {
 }
 
 .app-particles {
-    position: absolute;
+    position: fixed;
 }
 
 .logo {
