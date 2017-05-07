@@ -45,13 +45,19 @@
                             лидогенерации и улучшаем логику доставки клиентов в вашу CRM.
                         </p>
                         <section class="call-form">
-                            <span class="call-form__title">Отправить запрос на интеграцию</span>
-                            <div class="contact-phone">
-                                <input class="pretty-input" type="tel" placeholder="Ваш контактный телефон"/>                                        
-                            </div>
-                            <div class="call-form__submit">
-                                <button>ОТПРАВИТЬ</button>
-                            </div>
+                            <form id="call-back-form">
+                                <span class="call-form__title">Отправить запрос на интеграцию</span>
+                                <div class="contact-phone">
+                                    <input class="pretty-input"
+                                           type="tel"
+                                           id="phone"
+                                           name="phone"
+                                           placeholder="Ваш контактный телефон"/>
+                                </div>
+                                <div class="call-form__submit">
+                                    <button>ОТПРАВИТЬ</button>
+                                </div>
+                            </form>
                         </section>
                     </div>
                     <!--right side-->                                    
@@ -132,5 +138,6 @@
                 crossorigin="anonymous"></script>
 
         <script src="./background.js"></script>
+        <script src="./callBackPhone.js"></script>
     </body>
 </html>
