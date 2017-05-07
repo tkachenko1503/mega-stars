@@ -25,12 +25,12 @@
 
     <body>
         <main class="app-container">
-            <div class="app-particles">
+            <!--<div class="app-particles">
                 <canvas></canvas>
-            </div>
+            </div>-->
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-xs-12 col-md-11 col-md-offset-1">
+                    <div class="col-xs-11 col-xs-offset-1">
                         <div class="logo">
                             <img src="./mgtsk.svg" alt="mgtsk">
                         </div>
@@ -38,84 +38,87 @@
                 </div>
                 <div class="row app-content">
                     <!--left side-->                                    
-                    <div class="col-xs-12 col-md-5 col-md-offset-1">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <h1 class="section-header">Формируем воронку&nbsp;продаж</h1>
-                                <p class="app-goals">
-                                    Увеличиваем конверсию в продажах за счет интеграций источников 
-                                    лидогенерации и улучшаем логику доставки клиентов в вашу CRM.
-                                </p>
-                                <section class="call-form">
-                                    <span class="call-form__title">Отправить запрос на интеграцию</span>
-                                    <div class="contact-phone">
-                                        <input type="text" placeholder="Ваш контактный телефон"/>                                        
-                                    </div>
-                                    <div class="call-form__submit">
-                                        <button>ОТПРАВИТЬ</button>
-                                    </div>
-                                </section>
+                    <div class="col-xs-10 col-xs-offset-1 col-md-5 col-md-offset-1">
+                        <h2 class="section-header">Формируем воронку&nbsp;продаж</h2>
+                        <p class="app-goals">
+                            Увеличиваем конверсию в продажах за счет интеграций источников 
+                            лидогенерации и улучшаем логику доставки клиентов в вашу CRM.
+                        </p>
+                        <section class="call-form">
+                            <span class="call-form__title">Отправить запрос на интеграцию</span>
+                            <div class="contact-phone">
+                                <input type="text" placeholder="Ваш контактный телефон"/>                                        
                             </div>
-                        </div>
+                            <div class="call-form__submit">
+                                <button>ОТПРАВИТЬ</button>
+                            </div>
+                        </section>
                     </div>
                     <!--right side-->                                    
-                    <div class="col-xs-12 col-md-4 col-md-offset-1">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <h1 class="section-header">Калькулятор эффективности</h1>
-                                <div class="calc-inputs">
-                                    <div class="calc-inputs__controls">
-                                        <input type="number">
-                                    </div>
-                                    <div class="calc-inputs__controls">
-                                        <input type="number">                                        
-                                    </div>
-                                    <div class="calc-inputs__controls calc-inputs__controls_prediction smooth-text">
-                                        <p>Прогноз продаж:&nbsp;6 заявки</p>
-                                    </div>
+                    <div class="calc-section col-xs-10 col-xs-offset-1 col-md-5 col-md-offset-1">
+                        <h2 class="section-header">Калькулятор эффективности</h2>
+                        
+                        <div class="calc">
+                            <div class="calc-inputs">
+                                <div class="calc-inputs__controls">
+                                    <input type="number">
                                 </div>
-                                <div class="calc-inputs-labels">
-                                    <div class="calc-inputs-labels__text smooth-text">
-                                        <p>Обращений в&nbsp;месяц</p>
-                                    </div>
-                                    <div class="calc-inputs-labels__text smooth-text">
-                                        <p>Средняя конверсия в %</p>                                    
-                                    </div>
+                                <div class="calc-inputs__controls">
+                                    <input type="number">                                        
                                 </div>
-                                <div class="row">
-                                    <div class="col-xs-12 client-prediction">
-                                        <span class="client-prediction__count">+ 4</span>
-                                        <span>клиента</span>
-                                    </div>
-                                    <div class="col-xs-12 smooth-text">
-                                        <span>Прогноз продаж</span>
-                                    </div>
+                                <div class="calc-inputs__controls calc-inputs__controls_prediction smooth-text">
+                                    <p>Прогноз продаж:&nbsp;6 заявки</p>
                                 </div>
-                                <div class="row addition">
-                                    <div class="col-xs-12">
-                                        <span class="addition__title">Дополнительно</span>
-                                    </div>
-                                    <div class="col-xs-12">
-                                        <div class="addition__controls">
-                                            <input type="number">                                            
-                                        </div>
-                                        <div class="addition__controls addition__controls_prediction">
-                                            <p class="smooth-text">Текущая стоимость заказа:  4856 у.е.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-6 addition__controls-label smooth-text">
-                                        <p>Стоимость одного обращения в у.е.</p>
-                                    </div>                                    
+                            </div>
+
+                            <div class="calc-inputs-labels">
+                                <div class="calc-inputs-labels__text smooth-text">
+                                    <p>Обращений в&nbsp;месяц</p>
                                 </div>
-                                <div class="row order-down-price">
-                                    <div class="col-xs-12 order-down-prediction">
-                                        <span class="order-down-prediction__count">- 1243</span>
-                                        <span>у.е.</span>
-                                    </div>
-                                    <div class="col-xs-6 smooth-text">
-                                        <p>Снижение стоимости заказа</p>
-                                    </div>
+                                <div class="calc-inputs-labels__text smooth-text">
+                                    <p>Средняя конверсия в %</p>                                    
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="client-prediction">
+                            <h2>
+                                <span class="client-prediction__count">+ 4</span>
+                                <span>клиента</span>
+                            </h2>
+                        </div>
+                        <div class="smooth-text">
+                            <span>Прогноз продаж</span>
+                        </div>
+
+                        <div class="addition">
+                            <div>
+                                <span class="addition__title">Дополнительно</span>
+                            </div>
+                            <div class="addition__controls-container">
+                                <div class="addition__controls">
+                                    <input type="number">                                            
+                                </div>
+                                <div class="addition__controls addition__controls_prediction">
+                                    <p class="smooth-text">Текущая стоимость заказа:  4856 у.е.</p>
+                                </div>
+                            </div>
+                            <div class="addition__controls-label smooth-text">
+                                <div>Стоимость одного</div>
+                                <div>обращения в у.е.</div>
+                            </div>                                    
+                        </div>
+
+                        <div class="order-down-price">
+                            <div class="order-down-prediction">
+                                <h2>
+                                    <span class="order-down-prediction__count">- 1243</span>
+                                    <span>у.е.</span>
+                                </h2>
+                            </div>
+                            <div class="smooth-text">
+                                <div>Снижение стоимости</div>
+                                <div>заказа</div>
                             </div>
                         </div>
                     </div>

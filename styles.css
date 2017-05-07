@@ -1,7 +1,5 @@
 html, body {
-    overflow: hidden;
     background: #000;
-    height: 100%;
     color: #FFFFFF;
 }
 
@@ -10,8 +8,6 @@ html, body {
 }
 
 .app-container {
-    height: 100%;
-    overflow: auto;
     background: -webkit-linear-gradient(to top right, rgba(2, 34, 101, 100), rgba(3, 143, 184, 50));
     background: -moz-linear-gradient(to top right, rgba(2, 34, 101, 100), rgba(3, 143, 184, 50));
     background: -o-linear-gradient(to top right, rgba(2, 34, 101, 100), rgba(3, 143, 184, 50));
@@ -28,16 +24,11 @@ html, body {
 
 .app-content {
     margin-top: 70px;
-    margin-bottom: 50px;
-}
-
-.section-header {
-    font-size: 48px;
+    margin-bottom: 100px;
 }
 
 .app-goals {
     margin-top: 30px;
-    width: 500px;
 }
 
 .call-form {
@@ -53,25 +44,36 @@ html, body {
     margin-top: 30px;
 }
 
-.contact-phone input,
-.call-form__submit button {
-    width: 350px;
-    height: 52px;
-}
-
 .call-form__submit button {
     margin-top: 20px;
     background: #E91E63;
 }
 
+
+
+
+
+
+.contact-phone input,
+.call-form__submit button {
+    width: 284px;
+    height: 52px;
+}
+
 .calc-inputs {
-    margin-top: 20px;
+    margin-top: 40px;
     white-space: nowrap;
 }
 
-.calc-inputs input {
-    width: 143px;
+.calc-inputs input,
+.addition input {
     height: 56px;
+    width: 100%;    
+}
+
+.calc-inputs__controls,
+.addition__controls {
+    width: 50%;
 }
 
 .calc-inputs__controls,
@@ -81,8 +83,8 @@ html, body {
     margin-left: 10px;
 }
 
-.calc-inputs-labels__text {
-    margin-left: 30px;    
+.addition__controls-container {
+    white-space: nowrap;
 }
 
 .calc-inputs__controls:first-of-type,
@@ -90,21 +92,28 @@ html, body {
     margin-left: 0;
 }
 
+.calc {
+    position: relative;
+}
+
 .calc-inputs__controls_prediction {
-    width: 120px;
     white-space: initial;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-left: 0;
+}
+
+.calc-inputs-labels {
+    white-space: nowrap;
 }
 
 .calc-inputs-labels__text {
-    width: 123px;    
+    width: 50%;
 }
 
 .client-prediction {
-    margin-top: 30px;
-}
-
-.client-prediction {
-    font-size: 48px;
+    margin-top: 70px;
 }
 
 .client-prediction__count {
@@ -121,11 +130,6 @@ html, body {
     margin-bottom: 20px;
 }
 
-.addition input {
-    width: 143px;
-    height: 56px;
-}
-
 .addition__controls {
     display: inline-block;
     vertical-align: bottom;
@@ -135,18 +139,16 @@ html, body {
 .addition__controls_prediction {
     width: 130px;
     margin-left: 10px;
+    white-space: normal;
 }
 
-.addition__controls-label {
+.addition__controls-label,
+.calc-inputs-labels {
     margin-top: 10px;
 }
 
 .order-down-price {
     margin-top: 20px;
-}
-
-.order-down-prediction {
-    font-size: 48px;
 }
 
 .order-down-prediction__count {
@@ -155,4 +157,78 @@ html, body {
 
 .smooth-text {
     opacity: .5;
+}
+
+.calc-section {
+    margin-top: 70px;
+}
+
+@media(min-width: 768px) {
+    .section-header,
+    .client-prediction,
+    .order-down-prediction {
+        font-size: 48px;
+    }
+
+    .app-goals {
+        width: 500px;
+    }
+
+    .contact-phone input,
+    .call-form__submit button {
+        width: 350px;
+        height: 52px;
+    }
+
+    .calc-inputs input,
+    .addition input {
+        width: 140px;
+        height: 56px;
+    }
+
+    .calc-inputs__controls,
+    .addition__controls {
+        width: initial;
+    }
+
+    .calc-inputs__controls_prediction {
+        width: 120px;
+        white-space: initial;
+        position: initial;
+        margin-left: 10px;
+    }
+
+    .addition__controls_prediction {
+        width: 130px;
+    }
+
+    .client-prediction {
+        margin-top: 30px;
+    }
+
+    .calc-inputs-labels__text {
+        width: 123px;    
+    }
+
+    .calc-section {
+        margin-top: 150px;
+    }
+}
+
+@media(min-width: 992px) {
+    .calc-section {
+        margin-top: 0px;
+    }
+
+    .calc-inputs input {
+        width: 120px;
+    }
+
+    .calc-inputs-labels__text {
+        margin-left: 6px;    
+    }
+
+    .addition input {
+        width: 120px;
+    }
 }
