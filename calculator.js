@@ -31,9 +31,8 @@ $(function () {
         var requests = parseInt(requestsControl.val());
         var conversion = parseInt(conversionControl.val());
 
-        if (isNaN(requests) || isNaN(conversion)) {
-            return;
-        }
+        requests = isNaN(requests) ? 0 : requests;
+        conversion = isNaN(conversion) ? 0 : conversion;
 
         var remains = requests * 0.4;
         var realRequests = requests - remains;
@@ -51,28 +50,22 @@ $(function () {
         state.derived.sales = sales;
         state.derived.profitSales = profitSales;
         state.derived.totalSales = sales + lostSales;
-
-        updateViews();
     }
 
     function updateDownCostResults() {
         var requestCost = parseInt(requestCostControl.val());
 
-        if (isNaN(requestCost)) {
-            return;
-        }
+        requestCost = isNaN(requestCost) ? 0 : requestCost;
 
         var totalCost = requestCost * state.raw.requests;
 
-        var currentOrderCost = totalCost / state.derived.totalSales;
+        var currentOrderCost = state.derived.totalSales ? totalCost / state.derived.totalSales : 0;
         var totalProfitSales = state.derived.totalSales + state.derived.profitSales;
-        var profitOrderCost = currentOrderCost - (totalCost / totalProfitSales);
+        var profitOrderCost = totalProfitSales ? currentOrderCost - (totalCost / totalProfitSales) : 0;
 
         state.raw.requestCost = requestCost;
         state.derived.currentOrderCost = currentOrderCost;
         state.derived.profitOrderCost = profitOrderCost;
-
-        updateViews();
     }
 
     // views
@@ -89,10 +82,16 @@ $(function () {
         orderDownCostElement.html(profitOrderCost);
     }
 
+    function handler() {
+        updateSalesResults();
+        updateDownCostResults();
+        updateViews();
+    }
+
     // subscribe
-    requestsControl.on('input', updateSalesResults);
-    conversionControl.on('input', updateSalesResults);
-    requestCostControl.on('input', updateDownCostResults);
+    requestsControl.on('input', handler);
+    conversionControl.on('input', handler);
+    requestCostControl.on('input', handler);
 
     // init views
     updateViews();
