@@ -65,7 +65,7 @@ $(function () {
 
         state.raw.requestCost = requestCost;
         state.derived.currentOrderCost = currentOrderCost;
-        state.derived.profitOrderCost = profitOrderCost;
+        state.derived.profitOrderCost = profitOrderCost < 0 ? (profitOrderCost * -1) : profitOrderCost;
     }
 
     // views
