@@ -63,16 +63,16 @@ input[type="tel"] {
     padding: 10px;
 }
 
-input[type="tel"]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #ffffff;
 }
-input[type="tel"]::-moz-placeholder { /* Firefox 19+ */
+input::-moz-placeholder { /* Firefox 19+ */
   color: #ffffff;
 }
-input[type="tel"]:-ms-input-placeholder { /* IE 10+ */
+input:-ms-input-placeholder { /* IE 10+ */
   color: #ffffff;
 }
-input[type="tel"]:-moz-placeholder { /* Firefox 18- */
+input:-moz-placeholder { /* Firefox 18- */
   color: #ffffff;
 }
 
