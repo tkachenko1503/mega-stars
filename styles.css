@@ -48,6 +48,11 @@ html, body {
     margin-top: 20px;
     background: #e91e63;
     border: 0;
+    opacity: .7;
+}
+
+.call-form__submit button:disabled {
+    opacity: .5;    
 }
 
 .pretty-input {
