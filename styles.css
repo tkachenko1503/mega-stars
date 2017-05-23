@@ -81,6 +81,15 @@ input:-moz-placeholder { /* Firefox 18- */
   color: #ffffff;
 }
 
+.loader {
+    text-align: center;
+    height: 20px;
+}
+
+.loader img {
+    display: none;
+}
+
 .contact-phone input,
 .call-form__submit button {
     width: 100%;
@@ -189,7 +198,7 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 .calc-section {
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
 @media(min-width: 768px) {

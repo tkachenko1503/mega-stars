@@ -5,6 +5,7 @@ $(function () {
     var callBackForm = $('#call-back-form');
     var phoneInput = callBackForm.find('#phone');
     var sendButton = callBackForm.find('button');
+    var formLoader = callBackForm.find('#call-form__loader');
 
     phoneInput.mask('+0 (000) 000 00 00', {
         onComplete: function (cep) {
@@ -24,12 +25,15 @@ $(function () {
 
         var phone = phoneInput.val();
 
+        formLoader.css('display', 'initial');
+
         $.ajax(CALL_BACK_PHONE_POST_URL, {
             type: 'POST',
             data: JSON.stringify({phone: phone}),
             contentType: 'application/json',
             crossDomain: true,
             complete: function () {
+                formLoader.css('display', 'none');                
                 callBackForm[0].reset();
                 phoneInput.attr('placeholder', MESSAGE_AFTER_SAVE);
                 sendButton.prop('disabled', true);
