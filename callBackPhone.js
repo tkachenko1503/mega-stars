@@ -29,10 +29,9 @@ $(function () {
         var phone = phoneInput.val();
         var loader = new Image();
 
-        loader.src = '/loader.svg';
+        loader.src = './loader.svg';
         sendButton.prop('disabled', true);
         sendButton.html(loader);
-        // <img id="call-form__loader" src="/loader.svg" />
 
         $.ajax(CALL_BACK_PHONE_POST_URL, {
             type: 'POST',
