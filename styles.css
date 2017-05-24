@@ -48,10 +48,10 @@ html, body {
     margin-top: 20px;
     background: #e91e63;
     border: 0;
-    opacity: .7;
+    opacity: .8;    
 }
 
-.call-form__submit button:disabled {
+.call-form__submit button.button_disabled_yes {
     opacity: .5;    
 }
 
@@ -198,7 +198,7 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 .calc-section {
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 @media(min-width: 768px) {
