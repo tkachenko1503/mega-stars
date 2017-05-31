@@ -67,10 +67,20 @@
                         <div class="calc">
                             <div class="calc-inputs">
                                 <div class="calc-inputs__controls">
-                                    <input id="requests" class="pretty-input" type="number" placeholder="0">
+                                    <input id="requests" 
+                                           class="pretty-input" 
+                                           type="number" 
+                                           onkeypress="return event.charCode >= 48" 
+                                           min="0" 
+                                           placeholder="0">
                                 </div>
                                 <div class="calc-inputs__controls">
-                                    <input id="conversion" class="pretty-input" type="number" placeholder="0">                                        
+                                    <input id="conversion" 
+                                           class="pretty-input" 
+                                           type="number" 
+                                           onkeypress="return event.charCode >= 48" 
+                                           min="0" 
+                                           placeholder="0">                                        
                                 </div>
                                 <div class="calc-inputs__controls calc-inputs__controls_prediction smooth-text">
                                     <p>
@@ -107,7 +117,12 @@
                             </div>
                             <div class="addition__controls-container">
                                 <div class="addition__controls">
-                                    <input id="requestCost" class="pretty-input" type="number" placeholder="0">                                            
+                                    <input id="requestCost"
+                                           class="pretty-input"
+                                           type="number"
+                                           onkeypress="return event.charCode >= 48" 
+                                           min="0" 
+                                           placeholder="0">                                            
                                 </div>
                                 <div class="addition__controls addition__controls_prediction">
                                     <p class="smooth-text">
